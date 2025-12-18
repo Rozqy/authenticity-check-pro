@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import AdminSidebar from '../../../components/AdminSidebar';
+import AdminSidebar from '../../../../components/AdminSidebar';
 
 interface Brand {
   _id: string;

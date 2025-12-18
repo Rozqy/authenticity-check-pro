@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import AdminSidebar from '../../components/AdminSidebar';
+import AdminSidebar from '../../../components/AdminSidebar';
 import Link from 'next/link';
 
 interface Brand {
