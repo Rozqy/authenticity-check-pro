@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
-import Header from '@/components/Header';
+import Header from '../../components/Header';
 
 type TabType = 'user-login' | 'user-signup' | 'admin-login';
 

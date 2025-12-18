@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import Header from '@/components/Header';
+import Header from '../../components/Header';
 
 export default function VerifyCodePage() {
   const router = useRouter();

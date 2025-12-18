@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
-import Header from '@/components/Header';
+import Header from '../../components/Header';
 
 export default function ResultPage() {
   const searchParams = useSearchParams();
