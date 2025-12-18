@@ -148,39 +148,39 @@ export default function VerifyImagePage() {
     <div className="min-h-screen bg-gray-50">
       <Header />
       
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
-        <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6 lg:p-8">
-          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
+      <main className="max-w-4xl mx-auto px-3 sm:px-6 lg:px-8 py-2 sm:py-8">
+        <div className="bg-white rounded-lg shadow-sm p-3 sm:p-6 lg:p-8">
+          <h1 className="text-lg sm:text-3xl font-bold text-gray-900 mb-1 sm:mb-2">
             Verify Product Authenticity
           </h1>
-          <p className="text-sm sm:text-base text-gray-600 mb-6 sm:mb-8">
+          <p className="text-xs sm:text-base text-gray-600 mb-3 sm:mb-8">
             Upload photos of the product. <strong className="text-red-600">IMPORTANT:</strong> For accurate fake detection, you must enter the batch number, serial number, and barcode visible in the image.
           </p>
           
-          <div className="mb-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-            <div className="flex items-start space-x-3">
-              <svg className="w-6 h-6 text-yellow-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="mb-3 sm:mb-6 p-2.5 sm:p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+            <div className="flex items-start space-x-2 sm:space-x-3">
+              <svg className="w-4 h-4 sm:w-6 sm:h-6 text-yellow-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
               </svg>
               <div>
-                <h3 className="font-semibold text-yellow-900 mb-1">Image-Only Verification is Limited</h3>
-                <p className="text-sm text-yellow-800">
+                <h3 className="text-xs sm:text-sm font-semibold text-yellow-900 mb-0.5">Image-Only Verification is Limited</h3>
+                <p className="text-xs sm:text-sm text-yellow-800 leading-relaxed">
                   Without product codes, we cannot detect fakes accurately. Image analysis alone cannot verify authenticity. 
-                  <strong className="block mt-1">Please enter the batch number, serial number, and barcode from the product for reliable fake detection.</strong>
+                  <strong className="block mt-0.5">Please enter the batch number, serial number, and barcode from the product for reliable fake detection.</strong>
                 </p>
               </div>
             </div>
           </div>
 
           {/* Brand Selection */}
-          <div className="mb-6">
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+          <div className="mb-3 sm:mb-6">
+            <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1">
               Brand <span className="text-red-600">*</span> (Required for fake detection)
             </label>
             <select
               value={selectedBrand}
               onChange={(e) => setSelectedBrand(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-2.5 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               required
             >
               <option value="">Select brand (required)</option>
@@ -196,17 +196,17 @@ export default function VerifyImagePage() {
           </div>
 
           {/* Codes from Image (Required) */}
-          <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
-            <h3 className="text-sm font-medium text-red-900 mb-3">
+          <div className="mb-3 sm:mb-6 p-2.5 sm:p-4 bg-red-50 border border-red-200 rounded-lg">
+            <h3 className="text-xs sm:text-sm font-medium text-red-900 mb-1.5 sm:mb-3">
               Codes Visible in Image <span className="text-red-600">*</span> (REQUIRED for Fake Detection)
             </h3>
-            <p className="text-xs text-red-800 mb-4 font-medium">
+            <p className="text-xs text-red-800 mb-2 sm:mb-4 font-medium leading-relaxed">
               ⚠️ <strong>CRITICAL:</strong> Without these codes, we CANNOT detect fake products. Image analysis alone is not sufficient. 
               Please enter the batch number, serial number, and barcode visible on the product.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4">
               <div>
-                <label className="block text-xs font-medium text-red-900 mb-1">
+                <label className="block text-xs font-medium text-red-900 mb-0.5">
                   Batch Number <span className="text-red-600">*</span>
                 </label>
                 <input
@@ -214,12 +214,12 @@ export default function VerifyImagePage() {
                   value={codesFromImage.batchNumber}
                   onChange={(e) => setCodesFromImage({ ...codesFromImage, batchNumber: e.target.value })}
                   placeholder="e.g., HN123456"
-                  className="w-full px-3 py-2 text-sm border border-red-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500"
+                  className="w-full px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm border border-red-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500"
                   required
                 />
               </div>
               <div>
-                <label className="block text-xs font-medium text-red-900 mb-1">
+                <label className="block text-xs font-medium text-red-900 mb-0.5">
                   Serial Number <span className="text-red-600">*</span>
                 </label>
                 <input
@@ -227,12 +227,12 @@ export default function VerifyImagePage() {
                   value={codesFromImage.serialNumber}
                   onChange={(e) => setCodesFromImage({ ...codesFromImage, serialNumber: e.target.value })}
                   placeholder="e.g., SN789012"
-                  className="w-full px-3 py-2 text-sm border border-red-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500"
+                  className="w-full px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm border border-red-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500"
                   required
                 />
               </div>
               <div>
-                <label className="block text-xs font-medium text-red-900 mb-1">
+                <label className="block text-xs font-medium text-red-900 mb-0.5">
                   Barcode <span className="text-red-600">*</span>
                 </label>
                 <input
@@ -240,19 +240,19 @@ export default function VerifyImagePage() {
                   value={codesFromImage.barcode}
                   onChange={(e) => setCodesFromImage({ ...codesFromImage, barcode: e.target.value })}
                   placeholder="13-digit barcode"
-                  className="w-full px-3 py-2 text-sm border border-red-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500"
+                  className="w-full px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm border border-red-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500"
                   required
                 />
               </div>
               <div>
-                <label className="block text-xs font-medium text-gray-700 mb-1">
+                <label className="block text-xs font-medium text-gray-700 mb-0.5">
                   Manufacturing Date
                 </label>
                 <input
                   type="date"
                   value={codesFromImage.manufacturingDate}
                   onChange={(e) => setCodesFromImage({ ...codesFromImage, manufacturingDate: e.target.value })}
-                  className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="w-full px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 />
               </div>
             </div>
