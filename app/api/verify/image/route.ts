@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
-import connectDB from '../../../lib/mongodb';
-import VerificationLog from '../../../models/VerificationLog';
-import Brand from '../../../models/Brand';
-import ProductCodePattern from '../../../models/ProductCodePattern';
-import FakePattern from '../../../models/FakePattern';
+import connectDB from '../../../../lib/mongodb';
+import VerificationLog from '../../../../models/VerificationLog';
+import Brand from '../../../../models/Brand';
+import ProductCodePattern from '../../../../models/ProductCodePattern';
+import FakePattern from '../../../../models/FakePattern';
 
 export async function POST(request: NextRequest) {
   try {
