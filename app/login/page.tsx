@@ -1,13 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Header from '../../components/Header';
 
 type TabType = 'user-login' | 'user-signup' | 'admin-login';
 
-export default function LoginPage() {
+function LoginContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [activeTab, setActiveTab] = useState<TabType>('user-login');
@@ -439,6 +439,21 @@ export default function LoginPage() {
         </p>
       </main>
     </div>
+  );
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-gray-50">
+        <Header />
+        <main className="max-w-md mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center">Loading...</div>
+        </main>
+      </div>
+    }>
+      <LoginContent />
+    </Suspense>
   );
 }
 

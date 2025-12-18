@@ -3,6 +3,8 @@ import connectDB from '../../../../lib/mongodb';
 import VerificationLog from '../../../../models/VerificationLog';
 import Brand from '../../../../models/Brand';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(request: NextRequest) {
   try {
     // Simple auth check
