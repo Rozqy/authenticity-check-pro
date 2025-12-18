@@ -6,31 +6,31 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <Header />
       
-      <main className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-3 sm:py-12">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-12">
         {/* Hero Section */}
-        <div className="text-center mb-6 sm:mb-16">
-          <h1 className="text-xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-2 sm:mb-4 leading-tight">
+        <div className="text-center mb-8 sm:mb-16">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 leading-tight">
             Verify the Authenticity of Drinks & Cosmetic Products
           </h1>
-          <p className="text-xs sm:text-lg text-gray-600 mb-3 sm:mb-8">
+          <p className="text-sm sm:text-lg text-gray-600 mb-4 sm:mb-8">
             Check with product code or upload packaging photos for instant verification.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Link 
               href="/verify-code"
-              className="inline-flex items-center justify-center px-3 sm:px-8 py-2 sm:py-3 bg-blue-600 text-white text-xs sm:text-base font-medium rounded-lg hover:bg-blue-700 transition-colors"
+              className="inline-flex items-center justify-center px-5 sm:px-8 py-2.5 sm:py-3 bg-blue-600 text-white text-sm sm:text-base font-medium rounded-lg hover:bg-blue-700 transition-colors"
             >
-              <svg className="w-3.5 h-3.5 sm:w-5 sm:h-5 mr-1.5 sm:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
               </svg>
               Verify by Code
             </Link>
             <Link 
               href="/verify-image"
-              className="inline-flex items-center justify-center px-3 sm:px-8 py-2 sm:py-3 bg-gray-100 text-gray-700 text-xs sm:text-base font-medium rounded-lg hover:bg-gray-200 transition-colors"
+              className="inline-flex items-center justify-center px-5 sm:px-8 py-2.5 sm:py-3 bg-gray-100 text-gray-700 text-sm sm:text-base font-medium rounded-lg hover:bg-gray-200 transition-colors"
             >
-              <svg className="w-3.5 h-3.5 sm:w-5 sm:h-5 mr-1.5 sm:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
@@ -40,14 +40,14 @@ export default function Home() {
         </div>
 
         {/* Trusted Brands Section */}
-        <div className="mt-8 sm:mt-20">
-          <h2 className="text-lg sm:text-2xl font-bold text-gray-900 text-center mb-3 sm:mb-8">
+        <div className="mt-12 sm:mt-20">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 text-center mb-4 sm:mb-8">
             Trusted by Leading Brands
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
             {[1, 2, 3, 4, 5, 6].map((i) => (
               <div key={i} className="bg-gray-100 rounded-lg aspect-square flex items-center justify-center">
-                <div className="w-10 h-10 sm:w-16 sm:h-16 bg-gray-300 rounded"></div>
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gray-300 rounded"></div>
               </div>
             ))}
           </div>
@@ -55,7 +55,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="mt-8 sm:mt-20 border-t border-gray-200 py-3 sm:py-8">
+      <footer className="mt-12 sm:mt-20 border-t border-gray-200 py-4 sm:py-8">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-center items-center space-y-1 sm:space-y-2 md:space-y-0 md:space-x-6 text-xs sm:text-sm text-gray-600">
             <Link href="/privacy" className="hover:text-blue-600">Privacy Policy</Link>

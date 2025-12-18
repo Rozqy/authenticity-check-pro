@@ -63,28 +63,28 @@ export default function VerifyCodePage() {
     <div className="min-h-screen bg-gray-50">
       <Header />
       
-      <main className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2 sm:py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 sm:gap-8">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-8">
           {/* Left Side - Form */}
           <div className="lg:col-span-2">
-            <div className="bg-white rounded-lg shadow-sm p-3 sm:p-6 lg:p-8">
-              <h1 className="text-lg sm:text-3xl font-bold text-gray-900 mb-1 sm:mb-2">
+            <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6 lg:p-8">
+              <h1 className="text-xl sm:text-3xl font-bold text-gray-900 mb-2 sm:mb-2">
                 Verify Product Authenticity
               </h1>
-              <p className="text-xs sm:text-base text-gray-600 mb-3 sm:mb-8">
+              <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-8">
                 Enter the details from your product's packaging to check its originality.
               </p>
 
-              <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-6">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
-                    <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1">
+                    <label className="block text-sm font-medium text-gray-700 mb-1.5">
                       Brand
                     </label>
                     <select
                       value={formData.brand}
                       onChange={(e) => setFormData({ ...formData, brand: e.target.value })}
-                      className="w-full px-2.5 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       required
                     >
                       <option value="">Select brand</option>
@@ -97,7 +97,7 @@ export default function VerifyCodePage() {
                   </div>
 
                   <div>
-                    <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1">
+                    <label className="block text-sm font-medium text-gray-700 mb-1.5">
                       Batch Number
                     </label>
                     <input
@@ -105,13 +105,13 @@ export default function VerifyCodePage() {
                       value={formData.batchNumber}
                       onChange={(e) => setFormData({ ...formData, batchNumber: e.target.value })}
                       placeholder="e.g., B4TCH-2024"
-                      className="w-full px-2.5 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       required
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1">
+                    <label className="block text-sm font-medium text-gray-700 mb-1.5">
                       Serial Number
                     </label>
                     <input
@@ -119,13 +119,13 @@ export default function VerifyCodePage() {
                       value={formData.serialNumber}
                       onChange={(e) => setFormData({ ...formData, serialNumber: e.target.value })}
                       placeholder="e.g., SN-123456789"
-                      className="w-full px-2.5 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       required
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1">
+                    <label className="block text-sm font-medium text-gray-700 mb-1.5">
                       Barcode
                     </label>
                     <input
@@ -133,20 +133,20 @@ export default function VerifyCodePage() {
                       value={formData.barcode}
                       onChange={(e) => setFormData({ ...formData, barcode: e.target.value })}
                       placeholder="Enter barcode number"
-                      className="w-full px-2.5 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       required
                     />
                   </div>
 
                   <div className="md:col-span-2">
-                    <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1">
+                    <label className="block text-sm font-medium text-gray-700 mb-1.5">
                       Manufacturing Date
                     </label>
                     <input
                       type="date"
                       value={formData.manufacturingDate}
                       onChange={(e) => setFormData({ ...formData, manufacturingDate: e.target.value })}
-                      className="w-full px-2.5 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       required
                     />
                   </div>
@@ -155,7 +155,7 @@ export default function VerifyCodePage() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-blue-600 text-white py-2 sm:py-3 px-4 sm:px-6 rounded-lg text-xs sm:text-base font-medium hover:bg-blue-700 transition-colors disabled:opacity-50"
+                  className="w-full bg-blue-600 text-white py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg text-sm sm:text-base font-medium hover:bg-blue-700 transition-colors disabled:opacity-50"
                 >
                   {loading ? 'Checking...' : 'Check Authenticity'}
                 </button>
@@ -180,8 +180,8 @@ export default function VerifyCodePage() {
 
           {/* Right Side - Tips */}
           <div className="lg:col-span-1">
-            <div className="bg-white rounded-lg shadow-sm p-3 sm:p-6">
-              <h2 className="text-base sm:text-xl font-bold text-gray-900 mb-3 sm:mb-6">How to Spot an Original</h2>
+            <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6">
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 sm:mb-6">How to Spot an Original</h2>
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
