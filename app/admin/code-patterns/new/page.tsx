@@ -125,7 +125,7 @@ export default function NewCodePatternPage() {
                     type="radio"
                     name="is_genuine"
                     value="true"
-                    checked={formData.is_genuine === true || formData.is_genuine === 'true'}
+                    checked={formData.is_genuine === true}
                     onChange={() => setFormData({ ...formData, is_genuine: true })}
                     className="mr-2"
                   />
@@ -136,7 +136,7 @@ export default function NewCodePatternPage() {
                     type="radio"
                     name="is_genuine"
                     value="false"
-                    checked={formData.is_genuine === false || formData.is_genuine === 'false'}
+                    checked={formData.is_genuine === false}
                     onChange={() => setFormData({ ...formData, is_genuine: false })}
                     className="mr-2"
                   />
