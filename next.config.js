@@ -4,6 +4,7 @@ const nextConfig = {
   images: {
     domains: ['res.cloudinary.com', 'localhost'],
   },
+  // Force fresh build
 }
 
 module.exports = nextConfig
