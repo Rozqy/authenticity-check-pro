@@ -39,30 +39,30 @@ function ResultContent() {
     <div className="min-h-screen bg-gray-50">
       <Header />
       
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="mb-6">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Verification Result</h1>
-          <p className="text-gray-600">Analysis complete. See the detailed breakdown below.</p>
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
+        <div className="mb-4 sm:mb-6">
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Verification Result</h1>
+          <p className="text-sm sm:text-base text-gray-600">Analysis complete. See the detailed breakdown below.</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-8">
           {/* Left Panel - Product Info */}
           <div className="lg:col-span-2 space-y-6">
             {/* Product Card */}
-            <div className="bg-white rounded-lg shadow-sm p-6">
-              <div className="flex items-start space-x-6">
-                <div className="w-32 h-32 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <svg className="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6">
+              <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6">
+                <div className="w-full sm:w-32 h-32 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0 mx-auto sm:mx-0">
+                  <svg className="w-12 h-12 sm:w-16 sm:h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
                   </svg>
                 </div>
-                <div className="flex-1">
-                  <div className={`inline-block px-3 py-1 rounded-full text-sm font-medium mb-2 ${
+                <div className="flex-1 w-full">
+                  <div className={`inline-block px-3 py-1 rounded-full text-xs sm:text-sm font-medium mb-2 ${
                     isVerified ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
                   }`}>
                     {statusText}
                   </div>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                  <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
                     {brand || 'Product Verification'}
                   </h2>
                   <p className="text-gray-600 text-sm mb-4">
@@ -101,11 +101,11 @@ function ResultContent() {
 
             {/* Tabs */}
             <div className="bg-white rounded-lg shadow-sm">
-              <div className="border-b border-gray-200">
-                <nav className="flex space-x-8 px-6" aria-label="Tabs">
+              <div className="border-b border-gray-200 overflow-x-auto">
+                <nav className="flex space-x-4 sm:space-x-8 px-4 sm:px-6 min-w-max" aria-label="Tabs">
                   <button
                     onClick={() => setActiveTab('image')}
-                    className={`py-4 px-1 border-b-2 font-medium text-sm ${
+                    className={`py-4 px-1 border-b-2 font-medium text-xs sm:text-sm whitespace-nowrap ${
                       activeTab === 'image'
                         ? 'border-blue-500 text-blue-600'
                         : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
@@ -115,7 +115,7 @@ function ResultContent() {
                   </button>
                   <button
                     onClick={() => setActiveTab('code')}
-                    className={`py-4 px-1 border-b-2 font-medium text-sm ${
+                    className={`py-4 px-1 border-b-2 font-medium text-xs sm:text-sm whitespace-nowrap ${
                       activeTab === 'code'
                         ? 'border-blue-500 text-blue-600'
                         : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
@@ -125,7 +125,7 @@ function ResultContent() {
                   </button>
                   <button
                     onClick={() => setActiveTab('brand')}
-                    className={`py-4 px-1 border-b-2 font-medium text-sm ${
+                    className={`py-4 px-1 border-b-2 font-medium text-xs sm:text-sm whitespace-nowrap ${
                       activeTab === 'brand'
                         ? 'border-blue-500 text-blue-600'
                         : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
@@ -136,7 +136,7 @@ function ResultContent() {
                 </nav>
               </div>
 
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 {activeTab === 'image' && (
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-4">Image Analysis</h3>
@@ -258,8 +258,8 @@ function ResultContent() {
 
           {/* Right Panel - Known Fake Signs */}
           <div className="lg:col-span-1">
-            <div className="bg-white rounded-lg shadow-sm p-6">
-              <h2 className="text-xl font-bold text-gray-900 mb-6">Known Fake Signs</h2>
+            <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6">
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 sm:mb-6">Known Fake Signs</h2>
               <div className="space-y-4">
                 {[
                   'Poor quality printing, blurry text, or spelling mistakes on the label or packaging.',
@@ -281,16 +281,16 @@ function ResultContent() {
         </div>
 
         {/* Action Buttons */}
-        <div className="mt-8 flex space-x-4">
+        <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
           <button
             onClick={() => router.push('/verify-code')}
-            className="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+            className="w-full sm:w-auto px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
           >
             Start New Verification
           </button>
           <button
             onClick={() => window.print()}
-            className="px-6 py-3 bg-gray-100 text-gray-700 font-medium rounded-lg hover:bg-gray-200 transition-colors"
+            className="w-full sm:w-auto px-6 py-3 bg-gray-100 text-gray-700 font-medium rounded-lg hover:bg-gray-200 transition-colors"
           >
             Save Report
           </button>

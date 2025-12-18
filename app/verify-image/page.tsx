@@ -148,12 +148,12 @@ export default function VerifyImagePage() {
     <div className="min-h-screen bg-gray-50">
       <Header />
       
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="bg-white rounded-lg shadow-sm p-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
+        <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6 lg:p-8">
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
             Verify Product Authenticity
           </h1>
-          <p className="text-gray-600 mb-8">
+          <p className="text-sm sm:text-base text-gray-600 mb-6 sm:mb-8">
             Upload photos of the product. <strong className="text-red-600">IMPORTANT:</strong> For accurate fake detection, you must enter the batch number, serial number, and barcode visible in the image.
           </p>
           
@@ -204,7 +204,7 @@ export default function VerifyImagePage() {
               ⚠️ <strong>CRITICAL:</strong> Without these codes, we CANNOT detect fake products. Image analysis alone is not sufficient. 
               Please enter the batch number, serial number, and barcode visible on the product.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               <div>
                 <label className="block text-xs font-medium text-red-900 mb-1">
                   Batch Number <span className="text-red-600">*</span>
@@ -263,18 +263,18 @@ export default function VerifyImagePage() {
             onDrop={handleDrop}
             onDragOver={handleDragOver}
             onDragLeave={handleDragLeave}
-            className={`border-2 border-dashed rounded-lg p-12 text-center transition-colors ${
+            className={`border-2 border-dashed rounded-lg p-6 sm:p-12 text-center transition-colors ${
               isDragging ? 'border-blue-500 bg-blue-50' : 'border-gray-300'
             }`}
           >
             <div className="flex flex-col items-center">
-              <svg className="w-16 h-16 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-12 h-12 sm:w-16 sm:h-16 text-blue-600 mb-3 sm:mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
               </svg>
-              <p className="text-lg font-medium text-gray-900 mb-2">
+              <p className="text-base sm:text-lg font-medium text-gray-900 mb-2">
                 Drag & drop your images here, or
               </p>
-              <p className="text-sm text-gray-600 mb-4">
+              <p className="text-xs sm:text-sm text-gray-600 mb-4">
                 Upload photos of the bottle, label, cap, and box. PNG, JPG up to 10MB.
               </p>
               <button
@@ -300,7 +300,7 @@ export default function VerifyImagePage() {
               <h2 className="text-lg font-semibold text-gray-900 mb-4">
                 Uploaded Files ({uploadedFiles.length})
               </h2>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
                 {uploadedFiles.map((file, index) => (
                   <div key={index} className="relative group">
                     <img
