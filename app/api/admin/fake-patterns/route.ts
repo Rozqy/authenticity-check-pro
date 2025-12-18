@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import connectDB from '../../../lib/mongodb';
-import FakePattern from '../../../models/FakePattern';
+import connectDB from '../../../../lib/mongodb';
+import FakePattern from '../../../../models/FakePattern';
 
 export async function GET(request: NextRequest) {
   try {

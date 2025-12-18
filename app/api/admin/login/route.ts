@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { comparePassword } from '../../../lib/auth';
-import { generateToken } from '../../../lib/auth';
+import { comparePassword } from '../../../../lib/auth';
+import { generateToken } from '../../../../lib/auth';
 
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'admin@acp.com';
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'admin123';

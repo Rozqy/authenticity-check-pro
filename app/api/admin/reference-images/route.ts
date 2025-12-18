@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import connectDB from '../../../lib/mongodb';
-import ReferenceImage from '../../../models/ReferenceImage';
+import connectDB from '../../../../lib/mongodb';
+import ReferenceImage from '../../../../models/ReferenceImage';
 
 export async function GET(request: NextRequest) {
   try {
