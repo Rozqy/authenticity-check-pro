@@ -111,42 +111,6 @@ function LoginContent() {
     }
   };
 
-  const handleAdminLogin = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError('');
-    setLoading(true);
-
-    try {
-      const response = await fetch('/api/admin/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(adminLoginData),
-      });
-
-      let data;
-      try {
-        data = await response.json();
-      } catch (jsonError) {
-        const text = await response.text();
-        setError(`Server error: ${response.status} ${response.statusText}. ${text}`);
-        setLoading(false);
-        return;
-      }
-
-      if (response.ok) {
-        // Store token in cookie
-        document.cookie = `adminToken=${data.token}; path=/; max-age=604800`; // 7 days
-        router.push('/admin/dashboard');
-      } else {
-        setError(data.error || data.message || 'Invalid credentials');
-      }
-    } catch (error: any) {
-      console.error('Login error:', error);
-      setError(`An error occurred: ${error.message || 'Please try again.'}`);
-    } finally {
-      setLoading(false);
-    }
-  };
 
   return (
     <div className="min-h-screen bg-gray-50">
